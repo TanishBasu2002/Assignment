@@ -26,6 +26,12 @@ cd server && npm i
 ```js
  MONGODB_URL=
 ```
+if error is shown with the url replace 
+```js
+    mongoose.connect(`${url}`, { useNewUrlParser: true });
+    //with
+    mongoose.connect('yourmongodb string', { useNewUrlParser: true });
+```
 
 ### Start the apps on both Client and Server
 
