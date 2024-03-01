@@ -7,7 +7,7 @@ const User= require('./mongo/db')
 app.use(express.json());
 app.use(cors());
 const url = process.env.MONGODB_URL
-mongoose.connect('mongodb+srv://tanishbasu50:AoT8f9uRm97x5BYK@cluster0.pmzsx2e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true });
+mongoose.connect(`${url}`, { useNewUrlParser: true });
 
 app.post('/insert', async(req, res) => {
     const Email = req.body.email

@@ -8,7 +8,7 @@ export const Form = () => {
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
-      axios.post("http://localhost:4000/insert", {
+      axios.post("https://assignment-tiot.onrender.com/insert", {
         email: email,
       });
       alert("Responce Submitted");
